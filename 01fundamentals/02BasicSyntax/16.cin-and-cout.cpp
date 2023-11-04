@@ -6,9 +6,8 @@ int main()
 {
   int a, b;
   cin >> a >> b;
-  b = 5;
 
-  cout << a * b + 5 << endl;
+  cout << a * b + 20 << endl;
 
   return 0;
 }

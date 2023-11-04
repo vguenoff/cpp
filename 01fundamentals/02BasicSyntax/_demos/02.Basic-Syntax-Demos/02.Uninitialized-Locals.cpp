@@ -1,7 +1,8 @@
-#include<iostream>
+#include <iostream>
 
-int main() {
-    int georgeApples;
-    std::cout << georgeApples << std::endl;
-    return 0;
+int main()
+{
+  int georgeApples;
+  std::cout << georgeApples << std::endl;
+  return 0;
 }

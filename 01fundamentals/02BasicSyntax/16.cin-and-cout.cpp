@@ -5,7 +5,8 @@ using namespace std;
 int main() {
   int a, b;
   cin >> a >> b;
-  cout << a * b << endl;
+  b = 5;
+  cout << a * b + 5 << endl;
 
   return 0;
 }

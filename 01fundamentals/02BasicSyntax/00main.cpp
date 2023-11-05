@@ -8,8 +8,7 @@ int global = 5;
 // Constants
 // const int secondsInMinute = 60;
 
-int main()
-{
+int main() {
   // Variable modifiers
   // static int days = 3;
   // init once and exist through program
@@ -35,23 +34,28 @@ int main()
   // cout << "hello world " << a << endl;
 
   // bool 1 byte
-  bool initWithKeyword = true;
-  bool initWithKeywordCtor(true);
-  bool initWithZero = 0;
-  bool initWithNegativeNumber(-13);
+  // bool initWithKeyword = true;
+  // bool initWithKeywordCtor(true);
+  // bool initWithZero = 0;
+  // bool initWithNegativeNumber(-13);
 
-  cout
-      << initWithKeyword
-      << initWithKeywordCtor
-      << initWithZero
-      << initWithNegativeNumber
-      << endl; // 1101
+  // cout
+  //     << initWithKeyword
+  //     << initWithKeywordCtor
+  //     << initWithZero
+  //     << initWithNegativeNumber
+  //     << endl; // 1101
 
   // implicit casting (automatic)
   // explicit casting (non automatic)
   // char a = 'a';
   // int i = a; // valid
   // cout << i << endl; // 97
+  unsigned char c = 'C';
+
+  // type cast
+  cout << (short)c << endl; // 67
+  cout << short(c) << endl; // 67
 
   return 0;
 }

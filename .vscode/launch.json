@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/vg/Documents/2023/cpp/01fundamentals/02BasicSyntax/_demos/02.Basic-Syntax-Demos",
-      "program": "/Users/vg/Documents/2023/cpp/01fundamentals/02BasicSyntax/_demos/02.Basic-Syntax-Demos/build/Debug/outDebug"
+      "cwd": "/Users/vg/Documents/2023/cpp/01fundamentals/02BasicSyntax",
+      "program": "/Users/vg/Documents/2023/cpp/01fundamentals/02BasicSyntax/build/Debug/outDebug"
     }
   ]
 }

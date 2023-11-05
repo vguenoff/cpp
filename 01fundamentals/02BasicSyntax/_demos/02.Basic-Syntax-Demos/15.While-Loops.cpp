@@ -1,29 +1,32 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
-    int age = 0;
-    while (age < 18) {
-        cout << "can't drink at age " << age << endl;
-        age++;
-    }
+  // int age = 0;
 
-    cout << "age " << age << ", can finally drink!" << endl;
+  // while (age < 18) {
+  //   cout << "can't drink at age " << age << endl;
+  //   age++;
+  // }
 
-    int money = 0;
-    int drinkPrice = 2;
-    int drinksDrunk = 0;
-    do {
-        money = money - drinkPrice;
-        drinksDrunk++;
-        cout << "drank a drink, money remaining: " << money << endl;
-    } while(money > drinkPrice);
+  // cout << "age " << age << ", can finally drink!" << endl;
 
-    if (money < 0) {
-        cout << "security beat you up for drinking a drink and then not paying it" << endl;
-    }
+  int money = 0;
+  int drinkPrice = 2;
+  // int drinksDrunk = 0;
+  do {
+    money = money - drinkPrice;
+    // drinksDrunk++;
+    cout << "drank a drink, money remaining: " << money << endl;
+  } while (money > drinkPrice);
 
-    // P.S.: drink, drank, drunk, drinking... what is this, a C++ lecture or an English lesson?
+  if (money < 0) {
+    cout << "security beat you up for drinking a drink and then not paying it"
+         << endl;
+  }
 
-    return 0;
+  // P.S.: drink, drank, drunk, drinking... what is this, a C++ lecture or an
+  // English lesson?
+
+  return 0;
 }

@@ -19,23 +19,23 @@ int main() {
   // }
 
   if (a == 0 || b == 0 || c == 0)
-    cout << "+" << endl;
+    cout << '+' << endl;
   else if (a < 0 && b >= 0 && c >= 0)
-    cout << "-" << endl;
+    cout << '-' << endl;
   else if (a >= 0 && b < 0 && c >= 0)
-    cout << "-" << endl;
+    cout << '-' << endl;
   else if (a >= 0 && b >= 0 && c < 0)
-    cout << "-" << endl;
+    cout << '-' << endl;
   else if (a < 0 && b < 0 && c >= 0)
-    cout << "+" << endl;
+    cout << '+' << endl;
   else if (a >= 0 && b < 0 && c < 0)
-    cout << "+" << endl;
+    cout << '+' << endl;
   else if (a < 0 && b >= 0 && c < 0)
-    cout << "+" << endl;
+    cout << '+' << endl;
   else if (c < 0 && b < 0 && a < 0)
-    cout << "-" << endl;
+    cout << '-' << endl;
   else
-    cout << "+" << endl;
+    cout << '+' << endl;
 
   return 0;
 }

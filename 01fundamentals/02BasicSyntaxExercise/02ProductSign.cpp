@@ -18,25 +18,24 @@ int main() {
   //   cout << "-" << endl;
   // }
 
-  if (a == 0 || b == 0 || c == 0) {
+  if (a == 0 || b == 0 || c == 0)
     cout << "+" << endl;
-  } else if (a < 0 && b >= 0 && c >= 0) {
+  else if (a < 0 && b >= 0 && c >= 0)
     cout << "-" << endl;
-  } else if (a >= 0 && b < 0 && c >= 0) {
+  else if (a >= 0 && b < 0 && c >= 0)
     cout << "-" << endl;
-  } else if (a >= 0 && b >= 0 && c < 0) {
+  else if (a >= 0 && b >= 0 && c < 0)
     cout << "-" << endl;
-  } else if (a < 0 && b < 0 && c >= 0) {
+  else if (a < 0 && b < 0 && c >= 0)
     cout << "+" << endl;
-  } else if (a >= 0 && b < 0 && c < 0) {
+  else if (a >= 0 && b < 0 && c < 0)
     cout << "+" << endl;
-  } else if (a < 0 && b >= 0 && c < 0) {
+  else if (a < 0 && b >= 0 && c < 0)
     cout << "+" << endl;
-  } else if (c < 0 && b < 0 && a < 0) {
+  else if (c < 0 && b < 0 && a < 0)
     cout << "-" << endl;
-  } else {
+  else
     cout << "+" << endl;
-  }
 
   return 0;
 }

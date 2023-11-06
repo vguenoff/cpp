@@ -18,7 +18,9 @@ int main() {
   //   cout << "-" << endl;
   // }
 
-  if (a < 0 && b >= 0 && c >= 0) {
+  if (c == 0 || b == 0 || a == 0) {
+    cout << "+" << endl;
+  } else if (a < 0 && b >= 0 && c >= 0) {
     cout << "-" << endl;
   } else if (a >= 0 && b < 0 && c >= 0) {
     cout << "-" << endl;

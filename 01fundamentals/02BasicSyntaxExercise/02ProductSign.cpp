@@ -12,30 +12,45 @@ int main() {
   double a, b, c;
   cin >> a >> b >> c;
 
-  // if (a * b * c >= 0) {
-  //   cout << "+" << endl;
-  // } else {
-  //   cout << "-" << endl;
-  // }
+  if (a == 0 || b == 0 || c == 0) {
+    cout << '+' << endl;
 
-  if (a == 0 || b == 0 || c == 0)
+    return 0;
+  }
+
+  int negativeCount = 0;
+
+  if (a < 0)
+    negativeCount += 1;
+  if (b < 0)
+    negativeCount += 1;
+  if (c < 0)
+    negativeCount += 1;
+
+  if (negativeCount % 2 == 0) {
     cout << '+' << endl;
-  else if (a < 0 && b >= 0 && c >= 0)
+  } else {
     cout << '-' << endl;
-  else if (a >= 0 && b < 0 && c >= 0)
-    cout << '-' << endl;
-  else if (a >= 0 && b >= 0 && c < 0)
-    cout << '-' << endl;
-  else if (a < 0 && b < 0 && c >= 0)
-    cout << '+' << endl;
-  else if (a >= 0 && b < 0 && c < 0)
-    cout << '+' << endl;
-  else if (a < 0 && b >= 0 && c < 0)
-    cout << '+' << endl;
-  else if (c < 0 && b < 0 && a < 0)
-    cout << '-' << endl;
-  else
-    cout << '+' << endl;
+  }
+
+  // if (a == 0 || b == 0 || c == 0)
+  //   cout << '+' << endl;
+  // else if (a < 0 && b >= 0 && c >= 0)
+  //   cout << '-' << endl;
+  // else if (a >= 0 && b < 0 && c >= 0)
+  //   cout << '-' << endl;
+  // else if (a >= 0 && b >= 0 && c < 0)
+  //   cout << '-' << endl;
+  // else if (a < 0 && b < 0 && c >= 0)
+  //   cout << '+' << endl;
+  // else if (a >= 0 && b < 0 && c < 0)
+  //   cout << '+' << endl;
+  // else if (a < 0 && b >= 0 && c < 0)
+  //   cout << '+' << endl;
+  // else if (c < 0 && b < 0 && a < 0)
+  //   cout << '-' << endl;
+  // else
+  //   cout << '+' << endl;
 
   return 0;
 }

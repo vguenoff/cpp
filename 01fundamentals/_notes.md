@@ -7,3 +7,5 @@
 ▪ smallType smallVar = (smallType) bigVar;
 ▪ smallType smallVar = static_cast<smallType> bigVar;
 ▪ Can lose accuracy if value can't be represented in a smaller type
+
+# 03Functions

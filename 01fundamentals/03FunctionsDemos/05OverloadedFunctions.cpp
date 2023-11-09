@@ -22,10 +22,20 @@ double getMax(double a, double b) {
   return b;
 }
 
+void f1(int b) { b = b * 5; }
+void f1(int &b) { b = b + 1; }
+
 int main() {
+  int a = 5;
+
   cout << getMax(5, 7) << endl;
   cout << getMax(5, 42, 7) << endl;
   cout << getMax(5.0, 7.0) << endl;
+
+  f1((int)a);
+  cout << a << endl;
+  // f1((int &)a); // more than one instance of overloaded function "f1" matches
+  // the argument list:C/C++(308)
 
   return 0;
 }

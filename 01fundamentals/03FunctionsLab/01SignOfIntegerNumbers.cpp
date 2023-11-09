@@ -8,6 +8,8 @@ using namespace std;
 // "The number {number} is negative."– if the number > 0
 // "The number {number} is zero." – if the number == 0
 
+// use pass by reference if we think we'll change the value or of it's very
+// large structure
 void printSign(int n, string sign) {
   cout << "The number " << n << " is " << sign << "." << endl;
 }

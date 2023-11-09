@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
@@ -6,7 +7,7 @@ int main() {
 
   int undefinedFunctionNeverCalled(int); // no link error, since we don't call
                                          // it
-  int undefinedFunction(int);
+  int undefinedFunction(int);            // error
 
   cout << getMax(5, 7) << endl;
   cout << undefinedFunction(42) << endl;

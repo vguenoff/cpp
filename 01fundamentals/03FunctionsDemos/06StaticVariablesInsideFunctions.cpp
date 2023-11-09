@@ -2,6 +2,7 @@
 using namespace std;
 
 double movingAverage(int nextNumber) {
+  // static keeps the state on every function call
   static int numbers = 0;
   static int total = 0;
   total += nextNumber;

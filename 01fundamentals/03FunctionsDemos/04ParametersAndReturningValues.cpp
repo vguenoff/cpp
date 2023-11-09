@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int getMax(int a, int b) {
+// default values
+int getMax(int a = 1, int b = 2) {
   if (a > b) {
     return a;
   }

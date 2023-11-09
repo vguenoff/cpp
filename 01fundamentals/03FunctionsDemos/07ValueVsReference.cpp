@@ -1,19 +1,44 @@
 #include <iostream>
 using namespace std;
 
-double movingAverage(int nextNumber) {
-  static int numbers = 0;
-  static int total = 0;
-  total += nextNumber;
-  numbers++;
-  return total / (double)numbers;
+int square(int num) {
+  // by value - makes a copy
+  // param num is not modified
+  num = num * num;
+
+  return num;
 }
 
-int main() {
-  cout << movingAverage(1) << endl;  // average 1
-  cout << movingAverage(2) << endl;  // average 1.5
-  cout << movingAverage(12) << endl; // average 5
-  cout << movingAverage(-5) << endl; // average 2.5
+void swap(int &a, int &b) {
+  // changes the original vars
+  // not the copies
+  int oldA = a;
+  a = b;
+  b = oldA;
+}
 
-  return 0;
+void addOneByValue(int x) { x++; }
+
+void addOneByReference(int &x) { x++; }
+
+int main() {
+  int x = 5;
+  int y = 42;
+
+  cout << "original X: " << x << endl; // 5
+  cout << "original Y: " << y << endl; // 42
+
+  cout << "X^2: " << square(x) << endl; // 25
+
+  swap(x, y);
+  cout << "new X: " << x << endl; // 42
+  cout << "new Y: " << y << endl; // 5
+
+  int a = 0;
+
+  addOneByValue(a);
+  cout << a << endl; // a = 0
+
+  addOneByReference(a);
+  cout << a << endl; // a = 1
 }

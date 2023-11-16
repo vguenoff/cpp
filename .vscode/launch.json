@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/vg/Documents/2023/cpp/01fundamentals/03FunctionsExercises",
-      "program": "/Users/vg/Documents/2023/cpp/01fundamentals/03FunctionsExercises/build/Debug/outDebug"
+      "cwd": "/Users/vg/Documents/2023/cpp/01fundamentals/04ArraysDemos",
+      "program": "/Users/vg/Documents/2023/cpp/01fundamentals/04ArraysDemos/build/Debug/outDebug"
     }
   ]
 }

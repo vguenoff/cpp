@@ -1,14 +1,16 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 int main() {
-    double vector2d[2] = {};
-    std::cin >> vector2d[0] >> vector2d[1];
-    double length = sqrt(vector2d[0] * vector2d[0] + vector2d[1] * vector2d[1]);
-    vector2d[0] /= length;
-    vector2d[1] /= length;
+  double vector2d[2] = {};
+  std::cin >> vector2d[0] >> vector2d[1];
 
-    std::cout << vector2d[0] << " " << vector2d[1] << std::endl;
+  double length = sqrt(vector2d[0] * vector2d[0] + vector2d[1] * vector2d[1]);
 
-    return 0;
+  vector2d[0] /= length;
+  vector2d[1] /= length;
+
+  std::cout << vector2d[0] << " " << vector2d[1] << std::endl;
+
+  return 0;
 }

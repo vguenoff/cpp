@@ -15,7 +15,8 @@
     "-Wcast-align",
     "-Wconversion",
     "-Wsign-conversion",
-    "-Wnull-dereference"
+    "-Wnull-dereference",
+    "-Wno-c++11-extensions"
   ],
   "C_Cpp_Runner.msvcWarnings": [
     "/W4",

@@ -1,19 +1,20 @@
 #include <iostream>
 
-void print(int arr[], int arrSize) {
-  for (int i = 0; i < arrSize; i++) {
-    std::cout << arr[i] << " ";
+using namespace std;
+
+void printArray(int arr[], int arrSize, int startIndex = 0) {
+  for (int i = startIndex; i < arrSize; i++) {
+    cout << arr[i] << " ";
   }
 
-  std::cout << std::endl;
+  cout << endl;
 }
 
 int main() {
-  const int numbersLength = 3;
-  int numbers[numbersLength] = {1, 2, 3};
+  const int NUMBERS_LENGTH = 3;
+  int numbers[NUMBERS_LENGTH] = {1, 2, 3};
 
-  print(numbers, numbersLength);
-  print(numbers, 3);
+  printArray(numbers, NUMBERS_LENGTH, 1); // 2 3
 
   return 0;
 }

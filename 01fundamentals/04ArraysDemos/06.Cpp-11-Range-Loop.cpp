@@ -1,30 +1,34 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
   int numbers[] = {13, 42, 69};
 
   // copy
+  cout << "Pass by copy:" << endl;
   for (int number : numbers) {
-    std::cout << number << ' ';
-    ++number;
+    cout << number << ' ';
+    number += 1;
   }
-  std::cout << "\n==================" << std::endl;
-
+  cout << endl;
   for (int number : numbers) {
-    std::cout << number << ' ';
+    cout << number << ' ';
   }
-  std::cout << "\n==================" << std::endl;
 
   // reference
+  cout << endl << "Pass by reference:" << endl;
   for (int &number : numbers) {
-    std::cout << number << ' ';
-    ++number;
+    cout << number << ' ';
+    number += 1;
   }
-  std::cout << "\n==================" << std::endl;
 
+  cout << endl;
   for (int number : numbers) {
-    std::cout << number << ' ';
+    cout << number << ' ';
   }
+  cout << endl;
+  cout << "asd" << endl;
 
   return 0;
 }

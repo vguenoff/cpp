@@ -1,40 +1,44 @@
 #include <array>
 #include <iostream>
 
+using namespace std;
+
 const int arraySize = 3;
 
-void printByCopy(std::array<int, arraySize> numbers) {
+void printByCopy(array<int, arraySize> numbers) {
   for (int number : numbers) {
-    std::cout << number << ' ';
+    cout << number << ' ';
   }
 }
 
-void printByReference(const std::array<int, arraySize> &numbers) {
+void printByReference(const array<int, arraySize> &numbers) {
   for (int number : numbers) {
-    std::cout << number << ' ';
+    cout << number << ' ';
   }
 }
 
 int main() {
-  std::array<int, arraySize> numbers = {13, 42, 69};
+  array<int, arraySize> numbers = {13, 42, 69};
 
   // copy
   for (int number : numbers) {
-    std::cout << number << ' ';
+    cout << number << ' ';
     ++number;
   }
-  std::cout << "\n==================" << std::endl;
+  cout << "\n==================" << endl;
 
   printByCopy(numbers);
-  std::cout << "\n==================" << std::endl;
+  cout << "\n==================" << endl;
 
   // reference
   for (int &number : numbers) {
-    std::cout << number << ' ';
+    cout << number << ' ';
     ++number;
   }
-  std::cout << "\n==================" << std::endl;
 
+  cout << "\n==================" << endl;
+
+  printByReference(numbers);
   printByReference(numbers);
 
   return 0;

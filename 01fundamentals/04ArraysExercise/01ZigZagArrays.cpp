@@ -9,27 +9,30 @@ using namespace std;
 // Print two arrays, each on the separate line
 // Elements in the arrays have to be printed, separated by single space
 
-const int MAX_SIZE = 99;
-
-void printArray(int arr[], int size) {
+void printArray(int arr[], int size, string separator = " ") {
   for (int i = 0; i < size; i += 1) {
-    cout << arr[i] << ' ';
+    cout << arr[i] << separator;
   }
 
   cout << endl;
 }
+
+const int MAX_SIZE = 99;
 
 int main() {
   int numArrA[MAX_SIZE], numArrB[MAX_SIZE];
   int arrLength;
   cin >> arrLength;
 
+  int *first = numArrA;
+  int *second = numArrB;
+
   for (int i = 0; i < arrLength; i += 1) {
-    if (i % 2 == 0) {
-      cin >> numArrA[i] >> numArrB[i];
-    } else {
-      cin >> numArrB[i] >> numArrA[i];
-    }
+    cin >> first[i] >> second[i];
+
+    int *temp = first;
+    first = second;
+    second = temp;
   }
 
   printArray(numArrA, arrLength);

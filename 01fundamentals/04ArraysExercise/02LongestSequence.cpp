@@ -14,7 +14,7 @@ using namespace std;
 
 const int MAX_SIZE = 99;
 
-void enterArray(int arr[], int &arrSize) {
+void enterArray(int arr[], size_t &arrSize) {
   cin >> arrSize;
 
   if (arrSize > MAX_SIZE) {
@@ -27,8 +27,8 @@ void enterArray(int arr[], int &arrSize) {
   }
 }
 
-void printArray(int arr[], int size, string separator = " ") {
-  for (int i = 0; i < size; i += 1) {
+void printArray(int arr[], size_t size, string separator = " ") {
+  for (size_t i = 0; i < size; i += 1) {
     cout << arr[i] << separator;
   }
 
@@ -37,7 +37,7 @@ void printArray(int arr[], int size, string separator = " ") {
 
 int main() {
   int numArr[MAX_SIZE];
-  int arrSize;
+  size_t arrSize;
 
   enterArray(numArr, arrSize);
 
@@ -47,8 +47,25 @@ int main() {
   size_t currentSeqLength = 1;
   int currentLongestElement = numArr[0];
 
-  for (size_t i = 0; i < arrSize; i += 1) {
+  for (size_t i = 1; i < arrSize; i += 1) {
+    if (numArr[i] == currentLongestElement) {
+      currentSeqLength += 1;
+    } else {
+      currentSeqLength = 1;
+      currentLongestElement = numArr[i];
+    }
+
+    if (currentSeqLength >= longestSeqLength) {
+      longestSeqLength = currentSeqLength;
+      longestElement = currentLongestElement;
+    }
   }
+
+  for (size_t i = 0; i < longestSeqLength; i += 1) {
+    cout << longestElement << ' ';
+  }
+
+  cout << endl;
 
   return 0;
 }

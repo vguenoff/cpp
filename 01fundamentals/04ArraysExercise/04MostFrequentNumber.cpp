@@ -65,9 +65,11 @@ int main() {
 
   for (size_t i = 0; i < arrSize; i += 1) {
     if (maxCount == indexCounter[i]) {
-      cout << i << endl;
+      cout << i << ' ';
     }
   }
+
+  cout << endl;
 
   return 0;
 }

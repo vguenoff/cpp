@@ -40,6 +40,7 @@ void printArray(int arr[], size_t size, string separator = " ") {
 
 int findMaxCount(int arr[], size_t size = INDEX_MAX_SIZE) {
   int max = INT_MIN;
+
   for (size_t i = 0; i < size; i += 1) {
     if (arr[i] > max) {
       max = arr[i];

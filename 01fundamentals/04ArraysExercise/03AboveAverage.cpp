@@ -47,9 +47,11 @@ int main() {
     arraySum += arr[i];
   }
 
+  int average = arraySum / (int)arrSize;
+
   size_t newArrSize = 0;
   for (size_t i = 0; i < arrSize; i += 1) {
-    if (arr[i] >= arraySum / (int)arrSize) {
+    if (arr[i] >= average) {
       newArr[newArrSize] = arr[i];
       newArrSize += 1;
     }

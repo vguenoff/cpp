@@ -39,15 +39,15 @@ void printArray(int arr[], size_t size, string separator = " ") {
 // of them, ordered from smallest
 
 int findMaxCount(int arr[], size_t size = INDEX_MAX_SIZE) {
-  int max = INT_MIN;
+  int maxCount = INT_MIN;
 
   for (size_t i = 0; i < size; i += 1) {
-    if (arr[i] > max) {
-      max = arr[i];
+    if (arr[i] > maxCount) {
+      maxCount = arr[i];
     }
   }
 
-  return max;
+  return maxCount;
 }
 
 int main() {
@@ -63,8 +63,8 @@ int main() {
 
   int maxCount = findMaxCount(indexCounter);
 
-  for (size_t i = 0; i < arrSize; i += 1) {
-    if (maxCount == indexCounter[i]) {
+  for (size_t i = 0; i < INDEX_MAX_SIZE; i += 1) {
+    if (indexCounter[i] == maxCount) {
       cout << i << ' ';
     }
   }
@@ -76,4 +76,8 @@ int main() {
 
 // 16
 // 4 1 1 4 2 3 4 4 1 2 4 9 3 3 3 3
-// The number 4 is the most frequent
+// 3 4
+
+// 5
+// 0 0 0 1 0
+// 0

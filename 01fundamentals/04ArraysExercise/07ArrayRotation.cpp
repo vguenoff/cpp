@@ -40,19 +40,16 @@ int main() {
   size_t arrSize;
   enterArray(arr, arrSize);
 
-  size_t rotation;
-  cin >> rotation;
+  size_t rotations;
+  cin >> rotations;
 
-  for (size_t j = 0; j < rotation; j += 1) {
+  while (rotations--) {
     int first = arr[0];
 
-    for (size_t i = 0; i < arrSize; i += 1) {
-      if (i != arrSize - 1) {
-        arr[i] = arr[i + 1];
-      } else {
-        arr[i] = first;
-      }
-    }
+    for (size_t i = 0; i < arrSize; i += 1)
+      arr[i] = arr[i + 1];
+
+    arr[arrSize - 1] = first;
   }
 
   printArray(arr, arrSize);

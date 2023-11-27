@@ -5,6 +5,7 @@ int main() {
   string str = "canary";
 
   int foundIndex = str.find("a");
+
   while (foundIndex != string::npos) {
     cout << "a"
          << " found at " << foundIndex << " in " << str << endl;

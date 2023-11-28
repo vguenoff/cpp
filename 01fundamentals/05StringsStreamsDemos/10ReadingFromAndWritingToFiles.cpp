@@ -20,6 +20,7 @@ int main() {
   ofstream output;
   output.open("output.txt", ofstream::app);
   output << a + b << endl;
+  output.close();
 
   return 0;
 }

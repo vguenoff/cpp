@@ -2,22 +2,26 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
 using namespace std;
 
 int main() {
-  std::cout << "Enter space separated numbers." << std::endl;
+  cout << "Enter space separated numbers." << endl;
   string line;
   getline(cin, line);
 
   istringstream lineStream(line);
-  vector<int> numbers;
+
+  int numbers[100] = {};
+  int count = 0;
+
   int currentNumber;
   while (lineStream >> currentNumber) {
-    numbers.push_back(currentNumber);
+    numbers[count++] = currentNumber;
   }
 
-  for (int number : numbers) {
-    cout << number << endl;
+  for (int i = 0; i < count; i += 1) {
+    cout << numbers[i] << endl;
   }
 
   return 0;

@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/vg/Documents/2023/cpp/01fundamentals/06VectorsListsIteratorsLabDemos",
-      "program": "/Users/vg/Documents/2023/cpp/01fundamentals/06VectorsListsIteratorsLabDemos/build/Debug/outDebug"
+      "cwd": "/Users/vg/Documents/2023/cpp/01fundamentals/05StringsStreamsExercise",
+      "program": "/Users/vg/Documents/2023/cpp/01fundamentals/05StringsStreamsExercise/build/Debug/outDebug"
     }
   ]
 }

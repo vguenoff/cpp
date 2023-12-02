@@ -4,7 +4,7 @@
 using namespace std;
 
 void print(vector<int> numbers) {
-  for (int i = 0; i < numbers.size(); i++) {
+  for (size_t i = 0; i < numbers.size(); i++) {
     cout << numbers[i] << " ";
   }
 
@@ -12,11 +12,12 @@ void print(vector<int> numbers) {
 }
 
 void printMultiplied(vector<int> numbers, int multiplier) {
-  for (int i = 0; i < numbers.size(); i++) {
+  for (size_t i = 0; i < numbers.size(); i++) {
     numbers[i] *= multiplier;
   }
 
   print(numbers);
+  numbers.clear(); // clearing the copy after print
 }
 
 int main() {

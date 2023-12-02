@@ -14,8 +14,11 @@ vector<double> getSquareRoots(int from, int to) {
   return roots;
 }
 
-void print(vector<double> numbers) {
-  for (int number : numbers) {
+// pass by reference is recommended unless we need to copy it
+// void print(vector<double> numbers) {
+// const/ref as a protecting pattern
+void print(const vector<double> &numbers) {
+  for (double number : numbers) {
     cout << number << " ";
   }
 

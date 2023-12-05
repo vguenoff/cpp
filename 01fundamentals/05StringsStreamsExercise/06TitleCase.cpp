@@ -13,14 +13,13 @@ int main() {
   string input;
   getline(cin >> ws, input);
 
-  istringstream isstr(input);
   ostringstream result;
 
-  char c, prevChar = 0;
-  while (isstr >> c)
-    if (c != prevChar) {
-      result << c;
-      prevChar = c;
+  for (size_t c = 0; c < input.length(); c += 1)
+    if (!isalpha(input[c - 1])) {
+      result << (char)toupper(input[c]);
+    } else {
+      result << input[c];
     }
 
   cout << result.str() << endl;
@@ -28,4 +27,4 @@ int main() {
   return 0;
 }
 
-// aaaaabbbbbcdddeeeedssaa
+// On the south Carpathian mountains,a tree is swinging

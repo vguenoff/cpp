@@ -23,20 +23,22 @@ bool isValid(string str) {
 }
 
 int main() {
+  const string devider = ", ";
+
   string input;
   getline(cin >> ws, input);
 
   ostringstream result;
 
   for (;;) {
-    size_t pos = input.find(',');
+    size_t pos = input.find(devider);
     string sub = input.substr(0, pos);
 
     if (isValid(sub)) {
       result << sub << endl;
     }
 
-    input.erase(0, pos + 2);
+    input.erase(0, pos + devider.length());
 
     if (pos == string::npos) { // not found
       break;

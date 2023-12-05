@@ -21,25 +21,30 @@ int main() {
 
   int sum = 0;
 
-  string num;
-  while (lineStream >> num) {
-    bool isNumber = true;
+  string token;
+  while (lineStream >> token) {
+    // bool isNumber = true;
 
-    for (char c : num)
-      if (!isdigit(c)) {
-        // for negative numbers
-        if (c == '-') {
-          isNumber = true;
-          continue;
-        }
+    // for (char c : num)
+    //   if (!isdigit(c)) {
+    //     // for negative numbers
+    //     if (c == '-') {
+    //       isNumber = true;
+    //       continue;
+    //     }
 
-        isNumber = false;
-      }
+    //     isNumber = false;
+    //   }
 
-    if (isNumber) {
-      sum += stoi(num);
+    istringstream istrConvert(token);
+    int number;
+    istrConvert >> number; // this can be used as boolean
+
+    // if stream is not in error state - read correctly the number above
+    if (istrConvert) {
+      sum += number;
     } else {
-      invalid << num << ' ';
+      invalid << token << ' ';
     }
   }
 

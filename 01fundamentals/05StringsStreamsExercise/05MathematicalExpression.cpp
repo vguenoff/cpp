@@ -14,20 +14,20 @@ int main() {
   string input;
   getline(cin >> ws, input);
 
-  int openBracketCount = 0, closeBracketCount = 0;
+  int brackets = 0;
 
   for (char c : input) {
     switch (c) {
     case '(':
-      openBracketCount += 1;
+      brackets += 1;
       break;
     case ')':
-      closeBracketCount += 1;
+      brackets -= 1;
       break;
     }
   }
 
-  if (openBracketCount == closeBracketCount) {
+  if (brackets == 0) {
     cout << "correct" << endl;
   } else {
     cout << "incorrect" << endl;

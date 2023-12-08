@@ -33,7 +33,7 @@ void printList(const list<int> &numbers) {
     cout << number << " ";
   }
 
-  cout << endl << endl;
+  cout << endl;
 }
 
 void doAdd(list<int> &theList, int number) { theList.push_back(number); }

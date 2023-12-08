@@ -21,8 +21,8 @@ int main() {
   vector<string> words{"the", "quick", "purple", "fox"};
 
   // Example: print each string element and its length
-  for (vector<string>::iterator i = words.begin(); i != words.end(); i++) {
-    cout << *i << ": " << i->size() << endl;
+  for (vector<string>::iterator it = words.begin(); it != words.end(); it++) {
+    cout << *it << ": " << it->size() << endl;
     // NOTE: the same can be done with this code:
     // cout << *i << ": " << (*i).size() << endl;
   }

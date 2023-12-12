@@ -17,8 +17,7 @@ using namespace std;
 
 // You may get characters, which are not letters (for example:(, +, -, @, $)
 
-void readInputStringOutputVectorChar(vector<char> &output)
-{
+void readInputStringOutputVectorChar(vector<char> &output) {
   string input;
   getline(cin >> ws, input);
 
@@ -29,8 +28,7 @@ void readInputStringOutputVectorChar(vector<char> &output)
     output.push_back(bufferChar);
 }
 
-int main()
-{
+int main() {
   size_t numOfChars, numVowels = 0, numOther = 0;
   cin >> numOfChars;
 
@@ -40,17 +38,15 @@ int main()
 
   readInputStringOutputVectorChar(charList);
 
-  for (vector<char>::iterator it = charList.begin(); it != charList.end(); it++)
-  {
+  for (vector<char>::iterator it = charList.begin(); it != charList.end();
+       it++) {
     char letter = (char)tolower(*it);
 
-    if (letter == 'a' || letter == 'e' || letter == 'i' ||
-        letter == 'o' || letter == 'u' || letter == 'y')
-    {
+    if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' ||
+        letter == 'u' || letter == 'y') {
       numVowels += 1;
-    }
-    else if ((int(*it) >= 65 && int(*it) <= 90) || (int(*it) >= 97 && int(*it) <= 122))
-    {
+    } else if ((int(*it) >= 65 && int(*it) <= 90) ||
+               (int(*it) >= 97 && int(*it) <= 122)) {
       numOther += 1;
     }
   }

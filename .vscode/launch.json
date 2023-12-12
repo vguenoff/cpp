@@ -2,12 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "C/C++: clang++ build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: clang++ build active file"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/vg/Documents/2023/cpp/01fundamentals/06VectorsListsIteratorsExercise",
-      "program": "/Users/vg/Documents/2023/cpp/01fundamentals/06VectorsListsIteratorsExercise/build/Debug/outDebug"
+      "cwd": "/Users/vg/Documents/2024/cpp/01fundamentals/07Exam",
+      "program": "/Users/vg/Documents/2024/cpp/01fundamentals/07Exam/build/Debug/outDebug"
     }
   ]
 }

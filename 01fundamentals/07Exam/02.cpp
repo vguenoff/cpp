@@ -4,8 +4,7 @@
 
 using namespace std;
 
-void readInputStringOutputVectorString(vector<string> &output)
-{
+void readInputStringOutputVectorString(vector<string> &output) {
   string input;
   getline(cin >> ws, input);
 
@@ -16,8 +15,7 @@ void readInputStringOutputVectorString(vector<string> &output)
     output.push_back(bufferString);
 }
 
-int operate(string symbol, int previousValue, int currentValue)
-{
+int operate(string symbol, int previousValue, int currentValue) {
   if (symbol == "+")
     return previousValue + currentValue;
   if (symbol == "-")
@@ -33,22 +31,17 @@ int operate(string symbol, int previousValue, int currentValue)
   return 0;
 }
 
-int main()
-{
-  int currentValue = 0,
-      previousValue = 0;
+int main() {
+  int currentValue = 0, previousValue = 0;
 
   vector<string> operations;
 
   readInputStringOutputVectorString(operations);
 
-  for (vector<string>::iterator it = operations.begin(); it != operations.end(); it++)
-  {
-    if (*it == "+" || *it == "-" || *it == "*" || *it == "/")
-    {
-    }
-    else
-    {
+  for (vector<string>::iterator it = operations.begin(); it != operations.end();
+       it++) {
+    if (*it == "+" || *it == "-" || *it == "*" || *it == "/") {
+    } else {
       currentValue = stoi(*it);
       previousValue = stoi(*(it - 1));
     }

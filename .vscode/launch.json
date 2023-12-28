@@ -19,8 +19,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/vg/Documents/2024/cpp/01fundamentals/07Exam",
-      "program": "/Users/vg/Documents/2024/cpp/01fundamentals/07Exam/build/Debug/outDebug"
+      "cwd": "/Users/vg/Documents/2024/cpp/00book",
+      "program": "/Users/vg/Documents/2024/cpp/00book/build/Debug/outDebug"
     }
   ]
 }
